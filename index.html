@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Voice Controlled Notes App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shoelace-css/1.0.0-beta16/shoelace.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Voice Prescription App</h1>
+        <p class="page-description">Healthcare Made Personal</p>
+        <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In
+            Google Chrome.</h3>
+        <header></header>
+        <div class="app">
+            <h3>Sample Prescription</h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Sample Analysis</th>
+                        <th scope="col">Input Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Name</th>
+                        <td>Sharat Sarma, 30
+                            Male</td>
+                        <td>
+                            Dr. Will say name, age
+                            and gender
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Symptoms</th>
+                        <td>Dry cough for last
+                            3 days
+                            No fever
+                            Running Nose</td>
+                        <td>
+                            Chief Complaints and
+                            symptoms of patient
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Diagnosis</th>
+                        <td>Acute Bronchitis</td>
+                        <td>
+                        Doctor can enter one or
+                        more diagnosis
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prescription</th>
+                        <td>Azithromycin 500
+                            mg once a day for
+                            3 days
+                            Robitussin 5 ml
+                            thrice a day for 5
+                            days</td>
+                        <td>
+                            Name, Strength, dosage
+                            and some instructions like
+                            before or after food may
+                            be given
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Advice</th>
+                        <td>Drink Warm
+                            water
+                            Don't eat grapes</td>
+                        <td>
+                            Multiple small
+                            instructions
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <h3>Input Prescription</h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Input Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Name</th>
+                        <td>
+                            <div class="input-name">
+                                <textarea id="name-textarea" input=""
+                                    placeholder="Enter a new name by typing or using voice recognition."
+                                    rows="6"></textarea>
+                            </div>
+                            <button id="start-record-btn-name" title="Start Recording">Start Recognition</button>
+                            <button id="pause-record-btn-name" title="Pause Recording">Pause Recognition</button>
+                            <button id="save-note-btn-name" title="Save Note">Save Name</button>
+                            <ul id="notes-name">
+                                <li>
+                                    <p class="no-notes">You don't have any notes.</p>
+                                </li>
+                            </ul>
+                            <p id="recording-instructions-name">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Symptoms</th>
+                        <td>
+                            <div class="input-symptoms">
+                                <textarea id="symptoms-textarea"
+                                    placeholder="Enter symptoms by typing or using voice recognition."
+                                    rows="6"></textarea>
+                            </div>
+                            <button id="start-record-btn-symptoms" title="Start Recording">Start Recognition</button>
+                            <button id="pause-record-btn-symptoms" title="Pause Recording">Pause Recognition</button>
+                            <button id="save-note-btn-symptoms" title="Save Note">Save Symptoms</button>
+                            <ul id="notes-symptoms">
+                                <li>
+                                    <p class="no-notes">You don't have any notes.</p>
+                                </li>
+                            </ul>
+                            <p id="recording-instructions-symptoms">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Diagnosis</th>
+                        <td>
+                            <div class="input-single">
+                                <textarea id="note-textarea"
+                                    placeholder="Create a new note by typing or using voice recognition."
+                                    rows="6"></textarea>
+                            </div>
+                            <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+                            <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+                            <button id="save-note-btn" title="Save Note">Save Note</button>
+                            <ul id="notes">
+                                <li>
+                                    <p class="no-notes">You don't have any notes.</p>
+                                </li>
+                            </ul>
+                            <p id="recording-instructions-symptom">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prescription</th>
+                        <td>
+                            <div class="input-single">
+                                <textarea id="note-textarea"
+                                    placeholder="Create a new note by typing or using voice recognition."
+                                    rows="6"></textarea>
+                            </div>
+                            <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+                            <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+                            <button id="save-note-btn" title="Save Note">Save Note</button>
+                            <ul id="notes">
+                                <li>
+                                    <p class="no-notes">You don't have any notes.</p>
+                                </li>
+                            </ul>
+                            <p id="recording-instructions-symptom">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Advice</th>
+                        <td>
+                            <div class="input-single">
+                                <textarea id="note-textarea"
+                                    placeholder="Create a new note by typing or using voice recognition."
+                                    rows="6"></textarea>
+                            </div>
+                            <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+                            <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+                            <button id="save-note-btn" title="Save Note">Save Note</button>
+                            <ul id="notes">
+                                <li>
+                                    <p class="no-notes">You don't have any notes.</p>
+                                </li>
+                            </ul>
+                            <p id="recording-instructions-symptom">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p> -->
+            <hr>
+            <h3>Preview Prescription</h3>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Input Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Name</th>
+                        <td>
+                            Dr. Will say name, age
+                            and gender
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Symptoms</th>
+                        <td>
+                            Chief Complaints and
+                            symptoms of patient
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Diagnosis</th>
+                        <td>
+                            Doctor can enter one or
+                            more diagnosis
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Prescription</th>
+                        <td>
+                            Name, Strength, dosage
+                            and some instructions like
+                            before or after food may
+                            be given
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Advice</th>
+                        <td>
+                            Multiple small
+                            instructions
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <footer></footer>
+            
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="js/name.js"></script>
+    <script src="js/symptoms.js"></script>
+
+
+    <!-- Only used for the demos ads. Please ignore and remove. -->
+    <script src="https://cdn.tutorialzine.com/misc/enhance/v3.js" async></script>
+
+</body>
+
+</html>
