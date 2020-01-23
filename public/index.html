@@ -139,62 +139,63 @@
                     <tr>
                         <th scope="row">Diagnosis</th>
                         <td>
-                            <div class="input-single">
-                                <textarea id="note-textarea"
-                                    placeholder="Create a new note by typing or using voice recognition."
+                            <div class="input-diagnosis">
+                                <textarea id="diagnosis-textarea"
+                                    placeholder="Enter Diagnosis by typing or using voice recognition."
                                     rows="6"></textarea>
                             </div>
-                            <button id="start-record-btn" title="Start Recording">Start Recognition</button>
-                            <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
-                            <button id="save-note-btn" title="Save Note">Save Note</button>
-                            <ul id="notes">
+                            <button id="start-record-btn-diagnosis" title="Start Recording">Start Recognition</button>
+                            <button id="pause-record-btn-diagnosis" title="Pause Recording">Pause Recognition</button>
+                            <button id="save-note-btn-diagnosis" title="Save Note">Save Diagnosis</button>
+                            <ul id="notes-diagnosis">
                                 <li>
                                     <p class="no-notes">You don't have any notes.</p>
                                 </li>
                             </ul>
-                            <p id="recording-instructions-symptom">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                            <p id="recording-instructions-diagnosis">Press the <strong>Start Recognition</strong> button and allow access.</p>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">Prescription</th>
                         <td>
-                            <div class="input-single">
-                                <textarea id="note-textarea"
-                                    placeholder="Create a new note by typing or using voice recognition."
+                            <div class="input-prescription">
+                                <textarea id="prescription-textarea"
+                                    placeholder="Enter Prescription by typing or using voice recognition."
                                     rows="6"></textarea>
                             </div>
-                            <button id="start-record-btn" title="Start Recording">Start Recognition</button>
-                            <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
-                            <button id="save-note-btn" title="Save Note">Save Note</button>
-                            <ul id="notes">
+                            <button id="start-record-btn-prescription" title="Start Recording">Start Recognition</button>
+                            <button id="pause-record-btn-prescription" title="Pause Recording">Pause Recognition</button>
+                            <button id="save-note-btn-prescription" title="Save Note">Save Prescription</button>
+                            <ul id="notes-prescription">
                                 <li>
                                     <p class="no-notes">You don't have any notes.</p>
                                 </li>
                             </ul>
-                            <p id="recording-instructions-symptom">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                            <p id="recording-instructions-prescription">Press the <strong>Start Recognition</strong> button and allow access.</p>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">Advice</th>
                         <td>
-                            <div class="input-single">
-                                <textarea id="note-textarea"
-                                    placeholder="Create a new note by typing or using voice recognition."
+                            <div class="input-advice">
+                                <textarea id="advice-textarea"
+                                    placeholder="Enter Advice by typing or using voice recognition."
                                     rows="6"></textarea>
                             </div>
-                            <button id="start-record-btn" title="Start Recording">Start Recognition</button>
-                            <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
-                            <button id="save-note-btn" title="Save Note">Save Note</button>
-                            <ul id="notes">
+                            <button id="start-record-btn-advice" title="Start Recording">Start Recognition</button>
+                            <button id="pause-record-btn-advice" title="Pause Recording">Pause Recognition</button>
+                            <button id="save-note-btn-advice" title="Save Note">Save Advice</button>
+                            <ul id="notes-advice">
                                 <li>
                                     <p class="no-notes">You don't have any notes.</p>
                                 </li>
                             </ul>
-                            <p id="recording-instructions-symptom">Press the <strong>Start Recognition</strong> button and allow access.</p>
+                            <p id="recording-instructions-advice">Press the <strong>Start Recognition</strong> button and allow access.</p>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <button id="final-report" >Submit</button>
             <!-- <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p> -->
             <hr>
             <h3>Preview Prescription</h3>
@@ -252,14 +253,13 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script src="js/name.js"></script>
     <script src="js/symptoms.js"></script>
-
-
-    <!-- Only used for the demos ads. Please ignore and remove. -->
-    <script src="https://cdn.tutorialzine.com/misc/enhance/v3.js" async></script>
-
+    <script src="js/diagnosis.js"></script>
+    <script src="js/prescription.js"></script>
+    <script src="js/advice.js"></script>
+    <script src="js/report.js"></script>
 </body>
 
 </html>
